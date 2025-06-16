@@ -1,14 +1,15 @@
 import caronas.caronas as modulocarona
 import os 
 
-relatorioCarona_txt = "C:\\Users\\Andreyna\\Desktop\\Faculdade P1\\python\\Projeto.AV3\\relatorios\\relatoriodasCarona.txt"
+relatorioCarona_txt = "C:\\Users\\Andreyna\\Desktop\\Faculdade P1\\python\\App-Bora-Comigo\\relatorios\\relatoriodasCarona.txt"
+
 def relatorioDasCarona():
     if (len(modulocarona.verCaronasCadatradas()) >0):
         totalTodasCaronas = 0
         for carona in modulocarona.verCaronasCadatradas():
             totalCarona = carona["valVagas"] * len(carona["reservas"])
             print(f"\033[1;35;43m RELATÓRIO DAS SUAS CARONAS\033[m ")
-            print("")
+            print("\n")
             print(
                 f" Local de partida: {carona["localP"]}\n"
                 f" Local de destino: {carona["destino"]}\n"
@@ -31,7 +32,7 @@ def salvarRelatorio():
         for carona in modulocarona.verCaronasCadatradas():
             totalCarona = carona["valVagas"] * len(carona["reservas"])
             arquivo.write(f" RELATÓRIO DAS SUAS CARONAS ")
-            arquivo.write("")
+            arquivo.write("\n")
             arquivo.write(
                     f" Local de partida: {carona["localP"]}\n"
                     f" Local de destino: {carona["destino"]}\n"

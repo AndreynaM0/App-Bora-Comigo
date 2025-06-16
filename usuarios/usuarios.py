@@ -12,7 +12,7 @@ usuarioLogado = {
     "caronas" : [],
 }
 
-arquivo_txt = "C:\\Users\\Andreyna\\Desktop\\Faculdade P1\\python\\Projeto.AV3\\manipular_Arquivo\\usuarios.txt"
+arquivo_txt = "C:\\Users\\Andreyna\\Desktop\\Faculdade P1\\python\\App-Bora-Comigo\\manipular_Arquivo\\usuarios.txt"
 
 def ler_usuarios():
     usuarios= []
@@ -26,17 +26,11 @@ def ler_usuarios():
                 continue
             dados = linha.split(";")
             usuariosCadastrados.append({"nome" : dados[0], "email": dados[1], "senha": dados[2], "caronas": []})
-        # return [json.loads(linha.strip()) for linha in arquivo if linha.strip()]
     
-
-# def salvar_usuarios(usuarios):
-#     with open(arquivo_txt, mode='w', encoding='utf-8') as arquivo:
-#         for u in usuarios:
-#             arquivo.write(json.dumps(u, ensure_ascii=False) + '\n')
 
 
 def salvarUsuario(usuarios):
-    with open(arquivo_txt, "w", encoding="utf8") as arquivo: #Adicionar no final
+    with open(arquivo_txt, "w", encoding="utf8") as arquivo:
         arquivo.write(f"nome;email;senha\n")
         for usu in usuarios:
             arquivo.write(f"{usu['nome']};{usu['email']};{usu["senha"]};\n")
