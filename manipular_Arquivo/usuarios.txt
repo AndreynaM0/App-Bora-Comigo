@@ -1,0 +1,5 @@
+nome;email;senha
+andreyna;andreyna@gmail.com;andry123#;
+dani;dani@gmail.com;dani123#;
+Rafael;rafa@gmail.com;1234567#;
+lucas;luca@gmail.com;1234567#;
